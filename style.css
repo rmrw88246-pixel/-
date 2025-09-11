@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    direction: rtl; /* Right-to-left for Arabic */
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.translator-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    box-sizing: border-box; /* Important for padding and border */
+    font-size: 1.1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+select, button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+select {
+    background-color: #e9e9e9;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#translated-text {
+    background-color: #f8f9fa;
+    /* Also add padding to the bottom to not overlap with controls */
+    padding-bottom: 50px;
+}
+
+.output-section {
+    position: relative;
+}
+
+.output-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* Changed to left for RTL layout */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#speak-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #555;
+    transition: color 0.2s;
+}
+
+#speak-btn:hover {
+    color: #000;
+}
+
+#voice-select {
+    max-width: 200px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* --- History Section Styles --- */
+.history-container {
+    margin-top: 2rem;
+    text-align: right; /* For RTL */
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.history-container h2 {
+    text-align: center;
+    color: #4a4a4a;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+#history-list li {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+#history-list li .original-text {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+#history-list li .translated-text {
+    color: #007bff;
+    font-size: 1rem;
+}
+
+#clear-history-btn {
+    margin-top: 1rem;
+    background-color: #dc3545;
+    color: white;
+    float: left; /* For RTL layout */
+}
+
+#clear-history-btn:hover {
+    background-color: #c82333;
+}

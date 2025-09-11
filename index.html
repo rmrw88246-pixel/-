@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الترجمة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>موقع الترجمة</h1>
+        <div class="translator-container">
+            <div class="input-section">
+                <textarea id="text-to-translate" placeholder="اكتب النص هنا..."></textarea>
+            </div>
+            <div class="controls">
+                <select id="language-select">
+                    <option value="ar">العربية (Arabic)</option>
+                    <option value="en">الإنجليزية (English)</option>
+                    <option value="af">الأفريقانية (Afrikaans)</option>
+                    <option value="sq">الألبانية (Albanian)</option>
+                    <option value="am">الأمهرية (Amharic)</option>
+                    <option value="hy">الأرمنية (Armenian)</option>
+                    <option value="az">الأذربيجانية (Azerbaijani)</option>
+                    <option value="eu">الباسكية (Basque)</option>
+                    <option value="be">البيلاروسية (Belarusian)</option>
+                    <option value="bn">البنغالية (Bengali)</option>
+                    <option value="bs">البوسنية (Bosnian)</option>
+                    <option value="bg">البلغارية (Bulgarian)</option>
+                    <option value="ca">الكتالونية (Catalan)</option>
+                    <option value="ceb">السيبيوانية (Cebuano)</option>
+                    <option value="ny">الشيشيوا (Chichewa)</option>
+                    <option value="zh-CN">الصينية المبسطة (Chinese Simplified)</option>
+                    <option value="zh-TW">الصينية التقليدية (Chinese Traditional)</option>
+                    <option value="co">الكورسيكية (Corsican)</option>
+                    <option value="hr">الكرواتية (Croatian)</option>
+                    <option value="cs">التشيكية (Czech)</option>
+                    <option value="da">الدانمركية (Danish)</option>
+                    <option value="nl">الهولندية (Dutch)</option>
+                    <option value="eo">الإسبرانتو (Esperanto)</option>
+                    <option value="et">الإستونية (Estonian)</option>
+                    <option value="tl">الفلبينية (Filipino)</option>
+                    <option value="fi">الفنلندية (Finnish)</option>
+                    <option value="fr">الفرنسية (French)</option>
+                    <option value="fy">الفريزية (Frisian)</option>
+                    <option value="gl">الجاليكية (Galician)</option>
+                    <option value="ka">الجورجية (Georgian)</option>
+                    <option value="de">الألمانية (German)</option>
+                    <option value="el">اليونانية (Greek)</option>
+                    <option value="gu">الغوجاراتية (Gujarati)</option>
+                    <option value="ht">الكريولية الهايتية (Haitian Creole)</option>
+                    <option value="ha">الهوسا (Hausa)</option>
+                    <option value="haw">لغة هاواي (Hawaiian)</option>
+                    <option value="iw">العبرية (Hebrew)</option>
+                    <option value="hi">الهندية (Hindi)</option>
+                    <option value="hmn">الهمونغ (Hmong)</option>
+                    <option value="hu">المجرية (Hungarian)</option>
+                    <option value="is">الأيسلندية (Icelandic)</option>
+                    <option value="ig">الإيجبو (Igbo)</option>
+                    <option value="id">الإندونيسية (Indonesian)</option>
+                    <option value="ga">الأيرلندية (Irish)</option>
+                    <option value="it">الإيطالية (Italian)</option>
+                    <option value="ja">اليابانية (Japanese)</option>
+                    <option value="jw">الجاوية (Javanese)</option>
+                    <option value="kn">الكنادية (Kannada)</option>
+                    <option value="kk">الكازاخستانية (Kazakh)</option>
+                    <option value="km">الخميرية (Khmer)</option>
+                    <option value="ko">الكورية (Korean)</option>
+                    <option value="ku">الكردية (Kurdish)</option>
+                    <option value="ky">القيرغيزية (Kyrgyz)</option>
+                    <option value="lo">اللاوية (Lao)</option>
+                    <option value="la">اللاتينية (Latin)</option>
+                    <option value="lv">اللاتفية (Latvian)</option>
+                    <option value="lt">الليتوانية (Lithuanian)</option>
+                    <option value="lb">اللوكسمبرجية (Luxembourgish)</option>
+                    <option value="mk">المقدونية (Macedonian)</option>
+                    <option value="mg">المدغشقرية (Malagasy)</option>
+                    <option value="ms">الماليزية (Malay)</option>
+                    <option value="ml">الماليالامية (Malayalam)</option>
+                    <option value="mt">المالطية (Maltese)</option>
+                    <option value="mi">الماورية (Maori)</option>
+                    <option value="mr">الماراثية (Marathi)</option>
+                    <option value="mn">المنغولية (Mongolian)</option>
+                    <option value="my">البورمية (Myanmar)</option>
+                    <option value="ne">النيبالية (Nepali)</option>
+                    <option value="no">النرويجية (Norwegian)</option>
+                    <option value="ps">البشتوية (Pashto)</option>
+                    <option value="fa">الفارسية (Persian)</option>
+                    <option value="pl">البولندية (Polish)</option>
+                    <option value="pt">البرتغالية (Portuguese)</option>
+                    <option value="pa">البنجابية (Punjabi)</option>
+                    <option value="ro">الرومانية (Romanian)</option>
+                    <option value="ru">الروسية (Russian)</option>
+                    <option value="sm">الساموية (Samoan)</option>
+                    <option value="gd">الغيلية الاسكتلندية (Scots Gaelic)</option>
+                    <option value="sr">الصربية (Serbian)</option>
+                    <option value="st">السوثوية (Sesotho)</option>
+                    <option value="sn">الشونا (Shona)</option>
+                    <option value="sd">السندية (Sindhi)</option>
+                    <option value="si">السنهالية (Sinhala)</option>
+                    <option value="sk">السلوفاكية (Slovak)</option>
+                    <option value="sl">السلوفينية (Slovenian)</option>
+                    <option value="so">الصومالية (Somali)</option>
+                    <option value="es">الإسبانية (Spanish)</option>
+                    <option value="su">السوندانية (Sundanese)</option>
+                    <option value="sw">السواحيلية (Swahili)</option>
+                    <option value="sv">السويدية (Swedish)</option>
+                    <option value="tg">الطاجيكية (Tajik)</option>
+                    <option value="ta">التاميلية (Tamil)</option>
+                    <option value="te">التيلجو (Telugu)</option>
+                    <option value="th">التايلاندية (Thai)</option>
+                    <option value="tr">التركية (Turkish)</option>
+                    <option value="uk">الأوكرانية (Ukrainian)</option>
+                    <option value="ur">الأردية (Urdu)</option>
+                    <option value="uz">الأوزبكية (Uzbek)</option>
+                    <option value="vi">الفيتنامية (Vietnamese)</option>
+                    <option value="cy">الويلزية (Welsh)</option>
+                    <option value="xh">الكوسا (Xhosa)</option>
+                    <option value="yi">اليديشية (Yiddish)</option>
+                    <option value="yo">اليوربا (Yoruba)</option>
+                    <option value="zu">الزولو (Zulu)</option>
+                </select>
+                <button id="translate-btn">ترجم</button>
+            </div>
+            <div class="output-section">
+                <textarea id="translated-text" placeholder="الترجمة..." readonly></textarea>
+                <div class="output-controls">
+                    <button id="speak-btn" title="نطق النص">🔊</button>
+                    <select id="voice-select" title="اختر الصوت"></select>
+                </div>
+            </div>
+        </div>
+        <div class="history-container">
+            <h2>سجل الترجمات</h2>
+            <ul id="history-list">
+                <!-- History items will be populated by JS -->
+            </ul>
+            <button id="clear-history-btn">مسح السجل</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
