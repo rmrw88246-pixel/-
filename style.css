@@ -1,0 +1,249 @@
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#login-screen.hidden {
+    display: none;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#login-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#desktop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#taskbar-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.taskbar-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.taskbar-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#system-tray {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#clock {
+    padding: 0 10px;
+}
+
+#start-menu {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-sizing: border-box;
+}
+
+#pinned-apps {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.app-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.app-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.window {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 800px;
+    height: 600px;
+    background-color: #202020;
+    border: 1px solid #404040;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.title-bar {
+    height: 30px;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    cursor: move;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.window-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close-button { background-color: #ff5f57; }
+.minimize-button { background-color: #ffbd2e; }
+.maximize-button { background-color: #28c940; }
+
+.window-content {
+    flex-grow: 1;
+    padding: 10px;
+    color: #202020;
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.window.maximized {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px); /* 50px for taskbar */
+    border-radius: 0;
+}
+
+.resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+
+.resize-handle.top-left { top: -5px; left: -5px; cursor: nwse-resize; }
+.resize-handle.top-right { top: -5px; right: -5px; cursor: nesw-resize; }
+.resize-handle.bottom-left { bottom: -5px; left: -5px; cursor: nesw-resize; }
+.resize-handle.bottom-right { bottom: -5px; right: -5px; cursor: nwse-resize; }
+.resize-handle.top { top: -5px; left: 5px; right: 5px; cursor: ns-resize; height: 10px; }
+.resize-handle.bottom { bottom: -5px; left: 5px; right: 5px; cursor: ns-resize; height: 10px; }
+.resize-handle.left { top: 5px; bottom: 5px; left: -5px; cursor: ew-resize; width: 10px; }
+.resize-handle.right { top: 5px; bottom: 5px; right: -5px; cursor: ew-resize; width: 10px; }
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-list li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.file-list li:hover {
+    background-color: #e0e0e0;
+}

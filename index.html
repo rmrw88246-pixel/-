@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11 Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="login-screen">
+        <img src="assets/avatar.jpg" alt="User Avatar" id="avatar">
+        <h2>Jules</h2>
+        <form id="login-form">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <div id="desktop" class="hidden">
+        <div id="start-menu" class="hidden">
+            <div id="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <div id="pinned-apps">
+                <div class="app-icon">[Edge]</div>
+                <div class="app-icon">[Chrome]</div>
+                <div class="app-icon">[Explorer]</div>
+                <div class="app-icon">[Settings]</div>
+                <div class="app-icon">[Mail]</div>
+                <div class="app-icon">[Calendar]</div>
+            </div>
+        </div>
+        <div id="taskbar">
+            <div id="taskbar-icons">
+                <button id="start-button" class="taskbar-button">[Start]</button>
+                <button class="taskbar-button">[Edge]</button>
+                <button class="taskbar-button">[Chrome]</button>
+                <button id="explorer-button" class="taskbar-button">[Explorer]</button>
+            </div>
+            <div id="system-tray">
+                <div id="clock"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
